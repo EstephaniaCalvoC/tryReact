@@ -1,0 +1,153 @@
+/* Colors and icons 
+Blue1 #5AB0FF
+Black #00072B
+Gray3 #828282
+Gray4 #BDBDBD
+Shadow #0000004d
+
+https://iconscout.com/unicons/explore/line
+Menu: <i class="uil uil-ellipsis-v"></i>
+Add-item: <i class="uil uil-create-dashboard"></i>
+Eye: <i class="uil uil-eye"></i>
+Slash-eye: <i class="uil uil-eye-slash"></i>
+Edit: <i class="uil uil-pen"></i>
+Trash: <i class="uil uil-trash-alt"></i>
+>: <i class="uil uil-angle-right-b"></i>
+<: <i class="uil uil-angle-left-b"></i>
+*/
+
+/*
+App
+*/
+
+body {
+    padding: 0%;
+    margin: 0%;
+    font-family: Roboto, 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+    color: #00072B;
+}
+
+.container {
+    margin: 0px 18px 0px 18px;
+    height: 80vh;
+    font-family: 'Open Sans', Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 2px 2px 0px  #0000004d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*
+Header
+*/
+header {
+    margin: 35px 0px;
+}
+nav ul {
+    padding:0px;
+    margin:0px;
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+}
+
+nav ul li {
+    padding:0px;
+    margin: 0px 20px 0px 0px;
+    display: inline;
+}
+
+.menu {
+    color: #828282
+}
+
+/*
+Table
+*/
+
+.TableHeader {
+    background-color: #5AB0FF;
+    width: 100%;
+    height: 60px;
+    border-style: none;
+    border-radius: 4px 4px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+}
+
+.TableHeader p {
+    margin-left: 27px;
+}
+
+.buttonAdd {
+    margin-right: 35px;
+    background-color: rgba(0, 0, 0, 0);
+    border-style: none;
+}
+
+.buttonAdd i {
+    color: white;
+    font-size: 32px;
+    text-shadow: 0px 4px 4px #0000004d;
+}
+.TableBody table {
+  border-collapse: collapse;
+  width:75vw;
+  margin: 20px 16px;
+}
+
+.TableBody th,
+.TableBody td {
+    padding-left: 10px;
+    text-align: left;
+    height: 30px;
+}
+.TableBody th{    
+    border-bottom: 1px solid #828282;
+}
+.TableBody td {
+    border-bottom: 1px solid #BDBDBD;
+}
+
+.TableBody tr:nth-child(1) > td {
+    padding-top: 40px;
+}
+
+.TableBody button {
+    background-color: rgba(0, 0, 0, 0);
+    border-style: none;
+}
+
+.TableBody th:last-child,
+.TableBody td:last-child {
+    text-align: center
+}
+.TableBody td > i{
+    padding: 0px 5px;
+}
+
+
+/*
+Add form
+*/
+
+/* .AddTeacherForm {
+    padding: 0px 25px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+} */
+
+.AddTeacherForm label {
+    display: none;
+}
+
+.AddTeacherForm input {
+    border-style: none;
+    width: 120px;
+}
