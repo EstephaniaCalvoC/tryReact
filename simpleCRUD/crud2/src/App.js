@@ -25,6 +25,7 @@ function App() {
   const addTeacher = (teacher) => {
     teacher.id = uuidv4()
     setTeachers([...teachers, teacher])
+	  console.log(teachers)
   }
 
   // Delete user
@@ -45,6 +46,7 @@ function App() {
     setEditing(false);
     setTeachers(teachers.map(teacher => (teacher.id) === id ? newData : teacher))
   }
+  
   return (
     <>
     <Header />

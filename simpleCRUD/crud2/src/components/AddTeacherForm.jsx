@@ -1,39 +1,42 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
 
-const AddUserForm = (props) => {
+const AddTeacherForm = (props) => {
 
     // State
     const {register, errors, handleSubmit} = useForm();
     const onSubmit = (data, e) => {
         // console.log(data)
-        props.addUser(data)
+        props.addTeacher(data)
         // Clean input boxes
         e.target.reset();
     }
     return (
-        <tr>
-            <td>
-                <form className="AddTeacherForm" onSubmit={handleSubmit(onSubmit)}>
-                    <div>
-                        <label>Name</label>
-                        <input type="text" name="name" ref={
-                            register({
-                                required: {value:true, message: 'Campo Requerido'}
-                            })
-                        } />
-                        <div>
-                            {errors?.name?.message}
-                        </div>
-                    </div>
-                </form>
-            </td>
-            <td>
-                <button>+</button>
-                <button>x</button>
-            </td>
-        </tr>
+		<form className="AddTeacherForm" onSubmit={handleSubmit(onSubmit)}>
+			<div className="Inputs">
+				<label>Name</label>
+				<input type="text" name="name" ref={
+					register({
+						required: {value:true, message: '* Obligatory'}
+					})
+				} />
+				<div className="ErrorMessage">
+					{errors?.name?.message}
+				</div>
+			</div>
+			<div className="Confirm">
+                <button className="Ok">
+					<i className="uil uil-check"></i>
+				</button>
+                <button
+					className="Cancel"
+					onClick={()=>{props.setAdding(false)}}
+				>
+					<i className="uil uil-times"></i>
+				</button>
+            </div>
+        </form>
     );
 }
 
-export default AddUserForm;
+export default AddTeacherForm;

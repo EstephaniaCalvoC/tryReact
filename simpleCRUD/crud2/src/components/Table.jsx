@@ -1,12 +1,16 @@
-import React from "react";
-import AddUserForm from "./AddTeacherForm"
+import React, { useState } from 'react';
+import AddTeacherForm from "./AddTeacherForm"
 
 function Table(props) {
+	const [adding, setAdding] = useState(false);
   return (
     <div className="container">
         <div className="TableHeader">
             <p>Manage <b>Teachers</b></p>
-            <button className="buttonAdd">
+            <button 
+				className="buttonAdd"
+				onClick={()=>{setAdding(true)}}
+			>
                 <i className="uil uil-create-dashboard"></i>
             </button>
         </div>
@@ -41,10 +45,15 @@ function Table(props) {
                             <td colSpan={2}>No teachers</td>
                         </tr>
                     )}
-                    <AddUserForm />
                 </tbody>
             </table>
         </div>
+		  {
+			  adding ? (<AddTeacherForm 
+							setAdding={setAdding}
+							addTeacher={props.addTeacher}
+						/>) : (null)
+		  }
       </div>);
 }
 

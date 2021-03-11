@@ -4,6 +4,8 @@ Black #00072B
 Gray3 #828282
 Gray4 #BDBDBD
 Shadow #0000004d
+Green #75C528
+Red #e53131
 
 https://iconscout.com/unicons/explore/line
 Menu: <i class="uil uil-ellipsis-v"></i>
@@ -14,6 +16,8 @@ Edit: <i class="uil uil-pen"></i>
 Trash: <i class="uil uil-trash-alt"></i>
 >: <i class="uil uil-angle-right-b"></i>
 <: <i class="uil uil-angle-left-b"></i>
+ok: <i class="uil uil-check"></i>
+cancel: <i class="uil uil-times"></i>
 */
 
 /*
@@ -95,6 +99,14 @@ Table
     font-size: 32px;
     text-shadow: 0px 4px 4px #0000004d;
 }
+
+.buttonAdd:focus {
+	outline: none;
+}
+.buttonAdd:focus i {
+	text-shadow: 2px 4px 4px #00072B;
+}
+
 .TableBody table {
   border-collapse: collapse;
   width:75vw;
@@ -136,18 +148,67 @@ Table
 Add form
 */
 
-/* .AddTeacherForm {
-    padding: 0px 25px;
+.AddTeacherForm {
+	width:75vw;
     display:flex;
-    justify-content: space-between;
-    align-items: center;
-} */
+}
 
 .AddTeacherForm label {
     display: none;
 }
 
-.AddTeacherForm input {
-    border-style: none;
-    width: 120px;
+.AddTeacherForm .Inputs {
+	margin-left: 10px;
+}
+.AddTeacherForm .Inputs input {
+    width: 130px;
+	border: 0.5px solid #BDBDBD;
+	border-radius: 4px;
+	box-shadow: 0px 0px 2px 0px #0000004d;
+	font-family: 'Open Sans', Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+	color: #00072B;
+	font-size: 14px;
+	padding-left: 5px;
+}
+
+.Inputs input:focus{
+	outline: none;
+	border: 1px solid #5AB0FF;
+	box-shadow: 1px 1px 2px 0px #0000004d;
+}
+.AddTeacherForm .Confirm {
+	width: 60px;
+	margin-left: 15px;
+	margin-right: 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.Confirm button {
+	background-color: rgb (0, 0, 0, 0);
+	color: white;
+	border-radius: 4px;
+}
+
+.Confirm .Ok{
+	border-style: none;
+	background-color: #75C528;
+	box-shadow: 1px 1px 2px 0px #0000004d;
+}
+
+.Confirm .Cancel{
+	border-style: none;
+	background-color: #e53131;
+	box-shadow: 1px 1px 2px 0px #0000004d;
+}
+
+.Confirm i {
+	font-size: 14px;
+}
+
+.ErrorMessage {
+	margin: 5px 0px;
+	font-size: 12px;
+	color: #e53131;
 }
